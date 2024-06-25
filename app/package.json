@@ -1,0 +1,30 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . KRATU --icon=kratu_icon.ico"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armab2005/"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "arnab",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^11.1.1",
+    "make": "^0.8.1"
+  },
+  "devDependencies": {
+    "dialogs": "^2.0.1",
+    "electron-packager": "^15.2.0",
+    "fs": "0.0.1-security",
+    "smalltalk": "^4.0.7",
+    "xterm": "^4.10.0"
+  }
+}

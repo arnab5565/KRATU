@@ -1,0 +1,203 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(
+        45deg,
+        #6183a6 10%,
+        rgb(4, 0, 38)
+    );
+}
+header{
+    background-color: rgb(4, 0, 38) ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    box-shadow:  0 0 5px rgba(0,0,0,0.5);
+    height: 65px;
+    width: 100%;
+}
+.kratuLabel{
+    text-shadow: 70mm;
+    font-weight: 500;
+    font-size: 40px;
+    color:azure;
+    margin-right: 20px;
+}
+label{
+    position: relative;
+    top: 0;
+    text-decoration: none;
+    color:rgb(218, 218, 218);
+    margin-left: 5px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    cursor:pointer;
+}
+label:hover{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+.pbp{
+    font-style: italic;
+    font-weight: 100;
+    font-size: 13px;
+    color: antiquewhite;
+    margin-left: 12px;
+}
+.menubar{
+    background-color: rgb(4, 0, 38);
+    text-align: center;
+    bottom:0;
+    position: relative;  
+    border-radius:0px 20px 0px 20px ;
+    width:100%
+}
+.menubar ul{
+    display:inline-flex ;
+    list-style: none;
+    color: white;
+    justify-items:space-around;   
+}
+.menubar ul li{
+    font-size: 1rem;
+    padding:5px ;
+    color:white;
+    margin-right: 8px;
+}
+.button{
+    font-size: 35px;
+    text-align: center;
+    padding: 1px 1px 1px 1px;
+    border-radius: 55px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.button a{
+    font-size: 2rem;
+    border: none;
+    outline: none;
+}
+.menubar ul li a{
+    text-decoration: none;
+    color:rgb(218, 218, 218);
+    margin-left: 5px;
+    border: none;
+    outline: none;
+}
+.menubar ul li a:hover{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+.code-area textarea{
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 2px;
+    display: flex;
+    height: 37.7em;
+    padding: 10px;
+    width: 52%;
+    outline: none;
+    flex-direction: column;
+    border: 2px solid #ffffff;
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.5);
+    background-color:rgb(0, 0,0,0.7);
+    color: rgb(129, 185, 238);
+    font-family:'Courier New', Courier, monospace;
+    font-size:16px
+}
+iframe{
+    bottom: 0;
+    position: absolute;
+    height: 86vh;
+    width:40em;
+    top: 95px;
+    right:0px;
+    background-color: rgba(255,255,255,0.75);
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    display: block;
+}
+
+.form{
+    position: fixed;
+    margin-left: 1025px;
+    bottom: 19.5em;
+    margin-top: 10px;
+}
+.btn{
+    bottom: 19em;
+    margin-top: 10px;
+    margin-left: 40%;
+    font-size: 50px;
+    
+}
+input{
+    font-size: 25px;
+    text-align: center;
+    border-radius: 50px;
+    background-color: rgb(0, 0,0,0.7);
+    color: white;
+    outline: none;
+}
+.label{
+    position: absolute;
+    left:0;
+    top: 65px;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(4, 0, 38);
+    text-align: center;
+    
+}
+.label button{
+    height: 100%;
+    border: none;
+    outline: none;
+    background:transparent;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+.label button label{
+    color:rgb(160, 160, 160);
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.label button:hover{
+    background: rgb(29, 41,81);
+}
+.label button label:hover{
+    color: #ffffff;
+}
+.linkbtn{
+
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    font-size: 20px;
+    margin-left: 50px;
+
+
+}
+

@@ -1,0 +1,90 @@
+
+*{
+    font-family: sans-serif;
+}
+
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://www.itl.cat/pngfile/big/210-2101051_dark-web-scanning-background-image-for-website-of.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+.cloudform{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    display: block;
+
+}
+.cloudform input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 465px;
+    font-size: 20px;
+}
+.cloudform a{
+    color: white;
+    
+}
+#userProfile{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    display: none;
+
+}
+
+#userProfile a{
+    color: white;
+
+}
+#userProfile input{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 465px;
+    font-size: 20px;
+}
+

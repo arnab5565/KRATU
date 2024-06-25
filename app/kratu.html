@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!--This is the configuration section-->
+    <meta char="UTF-8" />
+    <link href="kratu.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <script src="node_modules/xterm/lib/xterm.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
+
+
+    <!--This is the mode section-->
+    <script src="mode/xml/xml.js"></script>
+    <script src="mode/htmlmixed/htmlmixed.js"></script>
+    <script src="mode/javascript/javascript.js"></script>
+    <script src="mode/css/css.js"></script>
+    <script src="mode/python/python.js"></script>
+    <script src="mode/django/django.js"></script>
+    <script src="mode/sql/sql.js"></script>
+    <script src="mode/clojure/clojure.js"></script>
+    <script src="mode/dockerfile/dockerfile.js"></script>
+    <script src="mode/dart/dart.js"></script>
+    <script src="mode/ruby/ruby.js"></script>
+    <script src="mode/shell/shell.js"></script>
+    <script src="mode/properties/properties.js"></script>
+    <script src="mode/clike/clike.js"></script>
+    <script src="mode/spreadsheet/spreadsheet.js"></script>
+    <script src="mode/yaml/yaml.js"></script>
+    <script src="mode/php/php.js"></script>
+
+
+    <!--This is the theme section-->
+    <link rel="stylesheet" href="theme/panda-syntax.css">
+    <link rel="stylesheet" href="theme/erlang-dark.css">
+    <link rel="stylesheet" href="theme/3024-night.css">
+    <link rel="stylesheet" href="theme/abcdef.css">
+    <link rel="stylesheet" href="theme/ambiance-mobile.css">
+    <link rel="stylesheet" href="theme/ayu-dark.css">
+    <link rel="stylesheet" href="theme/bespin.css">
+    <link rel="stylesheet" href="theme/ayu-mirage.css">
+    <link rel="stylesheet" href="theme/cobalt.css">
+    <link rel="stylesheet" href="theme/blackboard.css">
+    <link rel="stylesheet" href="theme/duotone-dark.css">
+    <link rel="stylesheet" href="theme/cobalt.css">
+    <link rel="stylesheet" href="theme/eclipse.css">
+    <link rel="stylesheet" href="theme/isotope.css">
+    <link rel="stylesheet" href="theme/liquibyte.css">
+    <link rel="stylesheet" href="theme/idea.css">
+    <link rel="stylesheet" href="theme/colorforth.css">
+    <link rel="stylesheet" href="theme/elegant.css">
+    <link rel="stylesheet" href="theme/gruvbox-dark.css">
+    <link rel="stylesheet" href="theme/xq-dark.css">
+
+    <!--This is the addon section-->
+    <script src="addon/edit/closebrackets.js"></script>
+    <script src="addon/edit/closetag.js"></script>
+    <link rel="stylesheet" href="addon/hint/show-hint.css">
+    <script src="addon/hint/show-hint.js"></script>
+    <script src="addon/hint/html-hint.js"></script>
+    <script src="addon/hint/css-hint.js"></script>
+    <script src="addon/hint/xml-hint.js"></script>
+    <script src="addon/hint/javascript-hint.js"></script>
+    <script src="addon/search/match-highlighter.js"></script>
+    <script src="addon/hint/sql-hint.js"></script>
+    <script src="addon/fold/xml-fold.js"></script>
+    <script src="addon/edit/matchtags.js"></script>
+    <script src="addon/edit/matchbrackets.js"></script>
+    <script src="addon/edit/trailingspace.js"></script>
+    <script src="addon/display/rulers.js"></script>
+    <link rel="stylesheet" href="addon/fold/foldgutter.css">
+    <script src="addon/fold/foldcode.js"></script>
+    <script src="addon/fold/markdown-fold.js"></script>
+    <script src="addon/fold/indent-fold.js"></script>
+    <script src="addon/fold/foldgutter.js"></script>
+    <script src="addon/fold/comment-fold.js"></script>
+    <script src="addon/fold/brace-fold.js"></script>
+
+
+    <title class="title">
+        Kratu
+    </title>
+
+
+
+</head>
+
+<body onload="setupKratu()">
+    <script src="load.js"></script>
+    <header>
+        <div class="menubar">
+
+            <ul>
+                <!--<li><button class="button" onclick="logProfile()"><a href="#"><i class="fas fa-user"></i></a></button>
+                </li>-->
+                <li><button class="button" id="html"><a href="#"><i id="image" class="fas fa-expand"></i></a></button>
+                </li>
+                <!--<li><button class="button" id="css"><a href="#"><i class="fas fa-terminal"></i></a></button></li>-->
+
+                <li><button class="button" onclick="createFile()"><a href="#"><i class="fas fa-file"></i></a></button>
+                </li>
+                <li><button class="button"><input type="file" id="file" style="display: none;"
+                            onchange="openFile(this)" /><label for="file" class="fas fa-folder"
+                            style="font-size: 33px;margin-right: 0px;margin-top: 6px;justify-content:center;align-items:center;"></label></button>
+                </li>
+                <li><button class="button"><a id="savetofile" class="btn" style="cursor: pointer;"><i
+                                class="fas fa-save"></i></a></button></li>
+                <li><button class="button" id="link_file" onclick="linkFile()"><a href="#"><i
+                                class="fas fa-bezier-curve"></i></a></button>
+                </li>
+
+
+            </ul>
+
+        </div>
+        <div class="label">
+            <button><label for="" class="lnlbtn" id="icon_scope"
+                    style="position: absolute;left: 0;top: 0;"></label></button>
+            <button><label for="" class="lnlbtn" id="firstlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="secondlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="thirdlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="fourthlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="fifthlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="sixthlbl"></label></button>
+            <button><label for="" class="lnlbtn" id="seventhlbl"></label></button>
+        </div>
+    </header>
+
+
+    <div class="code-area">
+        <textarea class="textarea" cols="20" rows="0" id="varia" name="varia" placeholder="HTML"
+            style="display: none;"></textarea>
+        <textarea class="cssarea" cols="20" rows="0" id="cssaria" name="cssaria" placeholder="CSS"
+            style="display: none;"></textarea>
+        <textarea class="jsarea" cols="20" rows="0" id="jsaria" name="jsaria" placeholder="JavaScript"
+            style="display: none;"></textarea>
+        <textarea class="secret" cols="20" rows="23" id="secret" name="jsaria" style="display: none;"></textarea>
+        <textarea id="htmlaria" style="display: none;"></textarea>
+    </div>
+
+
+    <div>
+        <!--starting of file exchagnge counter -->
+
+        <textarea id="first-text" style="display: none;"></textarea>
+        <textarea id="second-text" style="display: none;"></textarea>
+        <textarea id="third-text" style="display: none;"></textarea>
+        <textarea id="fourth-text" style="display: none;"></textarea>
+        <textarea id="fifth-text" style="display: none;"></textarea>
+        <textarea id="sixth-text" style="display: none;"></textarea>
+        <textarea id="seventh-text" style="display: none;"></textarea>
+
+        <!--end of file exchange counter registers -->
+        <iframe id="preview-window"></iframe>
+        <div class="form" id="filecreation" style="display: none;">
+            <input type="text" placeholder="Name of your file" id="input" />
+            <button class="btn" onclick="setLanguage()"><i class="fab fa-creative-commons-remix"></i></button>
+        </div>
+        <div class="form" id="linking" style="display: none;">
+            <input style="margin-top: 10px;" type="text" placeholder="The html file to link" id="htmlfile">
+            <input style="margin-top: 10px;" type="text" placeholder="The css file to link" id="cssfile">
+            <input style="margin-top: 10px;" type="text" placeholder="The javascript file to link" id="jsfile">
+            <button class="linkbtn" id="link" onclick="Link()">LINK AND COMPILE</button>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script>
+        $(function () {
+            $('#savetofile').click(function (e) {
+
+                var data = document.getElementById('secret').value
+
+                var data = 'data:application/html;charset=utf-8,' + encodeURIComponent(data);
+                //var jsdata='jsdata:application/javascript;charset=utf-8,'+encodeURIComponent(jsdata);
+                var el = e.currentTarget;
+                el.href = data;
+                el.target = '_blank';
+                el.download = 'data.html';
+
+            });
+        });
+        $(function () {
+            $('#html').click(function (e) {
+                var filecreator = document.getElementById("filecreation");
+                var iframe = document.getElementById("preview-window");
+                var codem = document.querySelector(".CodeMirror");
+                var linking = document.getElementById("linking");
+                if (iframe.style.display == "none") {
+                    iframe.style.display = "block";
+                    filecreator.style.display = "none";
+                    codem.style.width = "44em";
+                    linking.style.display = "none";
+                    document.getElementById("image").className = "fas fa-expand";
+
+                }
+                else {
+                    iframe.style.display = "none";
+                    filecreator.style.display = "none";
+                    codem.style.width = "84em";
+                    linking.style.display = "none";
+                    document.getElementById("image").className = "fas fa-compress";
+
+                }
+            });
+
+        });
+
+    </script>
+    <style>
+        .color-elem {
+            color: red;
+        }
+
+        .color-str {
+            color: #190;
+        }
+    </style>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyCVbNBIPPG_dI9LkTFqbme9OJkRY34eec0",
+            authDomain: "indracloud-e6d74.firebaseapp.com",
+            databaseURL: "https://indracloud-e6d74-default-rtdb.firebaseio.com",
+            projectId: "indracloud-e6d74",
+            storageBucket: "indracloud-e6d74.appspot.com",
+            messagingSenderId: "798751530158",
+            appId: "1:798751530158:web:4b8192dd116c609602e13f",
+            measurementId: "G-CQSTPRTDF5"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</body>
+
+</html>
