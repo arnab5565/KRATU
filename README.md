@@ -11,11 +11,11 @@ the backend or the main functionality or the core of functionality being the app
 <br>
 <h3>STEPS TO RUN THE FILE:</h3>
 <br>
-  <b>1)CLONE IT TO YOUR REMOTE DESKTOP ALSO MAKE SURE GIT IS INSTALLED AND RUN THIS COMMAND: git clone https://github.com/arnab5565/KRATU
+  <b>1)CLONE IT TO YOUR REMOTE DESKTOP ALSO MAKE SURE GIT IS INSTALLED AND RUN THIS COMMAND: <code>git clone https://github.com/arnab5565/KRATU</code>
     <br>
     2)NAVIGATE TO KRATU/app
     <br>
-    3)MAKE SURE NODE-JS IS INSTALLED AND RUN THE COMMAND: npm start 
+    3)MAKE SURE NODE-JS IS INSTALLED AND RUN THE COMMAND: <code>npm start</code>
   </b>
   <h2>ALTERNATE WAY TO RUN KRATU ON YOUR PC:</h2>
   <br>
