@@ -18,7 +18,7 @@
  * ###################### NOTE FOR THE DEVELOPERS USING THIS SOFTWARE #########################################
  * NOTE 1:IF YOU WANNA GO NEED SOME DOCUMENTATION FOR YOURSELF LOOK OUT AT https://kratu-docs.web.app/        #
  * NOTE 2:AS PER THE SOFTWARE IS OPEN SOURCE YOU ARE FREE TO EDIT BUT DON'T DISTRIBUTE WITHOUT OUR PERMISSION # 
- * NOTE 3:FOR ANY QUERIES CONTACT THIS NUMBER 6295551550                                                      #
+ * NOTE 3:FOR ANY QUERIES CONTACT THIS NUMBER 9875458194(Arnab Maiti)                                                      #
  * ############################################################################################################ 
  */
 
